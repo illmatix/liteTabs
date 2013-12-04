@@ -23,7 +23,7 @@
                 height : 'auto',
                 hideHash : true,
                 rounded : false,
-                autoloadTab: true,
+                autoloadTab: false,
                 selectedTab : 1,
                 width : 500
             },
@@ -64,7 +64,7 @@
             });
 
             // option: set selected tab
-            settings.autoloadTab && settings.selectedTab && $tab.eq(settings.selectedTab - 1).click();
+            settings.autoloadTab && (settings.selectedTab && $tab.eq(settings.selectedTab - 1).click());
 
             // option: set rounded corners
             settings.rounded && $this.addClass('rounded');
